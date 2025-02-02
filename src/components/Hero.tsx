@@ -3,37 +3,41 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero_background.png"
-          alt="Foster Küche"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-      
+    <section className="relative h-screen bg-[white] flex items-center justify-center px-8">
+     <div className="absolute inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('public/images/bg.jpg')" }}>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+</div>
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
-        <div className="max-w-7xl animate-fade-in">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 uppercase max-w-screen-lg break-words">
-        Exklusive Küchenlösungen von Foster
-</h1>
+      <div className="relative z-10 text-right"> {/* Flexbox für Rechtsbündigkeit */}
+        {/* Hauptüberschrift */}
+        
 
-<p className="text-lg md:text-xl text-gray-200 font-bold"><span className="text-lg md:text-xl mb-4 text-gray-200 font-[200]">Entdecken Sie **Foster**-Designs im Premium Brand Store in **Bergheim** –</span>
-<br></br>Qualität und Innovation für Ihre Traumküche
-</p>
+        <h1 className="text-8xl sm:text-8xl md:text-9xl font-semibold tracking-wider text-white animate-fade-in">
+          Pölzl
+        </h1>
+        
+        {/* Unterüberschrift */}
+        <h2 className="sm:text-2xl font-semibold tracking-wider text-white animate-fade-in">
+          In Steinform geben
+        </h2>
 
-            <a href="/#beratung">
-            <Button className="bg-primary hover:bg-primary-dark text-white px-6 py-3  mt-9">
-            Beratungstermin buchen
-          </Button>
-            </a>
+        <h2 className="sm:text-2xl font-semibold tracking-wider text-white animate-fade-in">
+          seit 1978
+        </h2>
 
-       
+        {/* Button */}
+        <div className="mt-8">
+          <a href="/#beratung">
+            <Button className="bg-[#F7ED6C] uppercase font-semibold text-black hover:bg-[#F7ED6C] pt-3 px-5 shadow-md rounded-3xl animate-fade-in">
+              Jetzt Beratung anfordern
+            </Button>
+          </a>
         </div>
       </div>
+
+      {/* Background image below text */}
+     
     </section>
   );
 };
