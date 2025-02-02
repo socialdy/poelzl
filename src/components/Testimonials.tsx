@@ -10,46 +10,46 @@ export const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah und Thomas",
-      role: "Familienhaushalt",
-      quote: "Das Cooking Surface Induktionskochfeld hat unsere Küche wirklich aufgewertet. Wir genießen die schnelle Zubereitung und die hohe Energieeffizienz. Besonders begeistert sind wir von der einfachen Bedienung und dem modernen Design, das perfekt zu unserer Küche passt.",
+      name: "Johann und Maria",
+      role: "Privathaushalt",
+      quote: "Unser Badezimmer aus Travertin Classic von Pölzl ist ein absoluter Blickfang! Die Qualität des Natursteins ist herausragend, und die Beratung war erstklassig. Wir sind begeistert von der natürlichen Eleganz und der hochwertigen Verarbeitung.",
     },
     {
       id: 2,
-      name: "Franziska",
-      role: "Selbstständige, Home Office",
-      quote: "Ich arbeite viel von zu Hause und das Cooking Surface ist mein täglicher Begleiter. Es spart nicht nur Energie, sondern auch Zeit. Die Heizleistung ist beeindruckend und der Platz, den es in der Küche spart, ist ein riesiger Vorteil für uns.",
+      name: "Stefan",
+      role: "Architekt",
+      quote: "Für hochwertige Architekturprojekte ist Pölzl meine erste Wahl. Die Kombination aus präziser Verarbeitung und individuellen Lösungen macht jedes Projekt einzigartig. Besonders beeindruckt mich die nachhaltige Produktion mit Photovoltaik-Unterstützung.",
     },
     {
       id: 3,
-      name: "Peter",
-      role: "Restaurantchef",
-      quote: "Als Restaurantbesitzer ist Effizienz entscheidend. Das Cooking Surface Induktionskochfeld hilft uns, die Kochzeiten zu verkürzen und gleichzeitig den Energieverbrauch zu senken. Es ist robust, einfach zu bedienen und bietet eine hervorragende Leistung – perfekt für unsere professionelle Küche.",
+      name: "Theresa & Markus",
+      role: "Eigenheimbesitzer",
+      quote: "Unsere Kaminverkleidung aus Pannonia Green gibt unserem Wohnraum eine besondere Atmosphäre. Die natürlichen Strukturen des Steins sind wunderschön und die Verarbeitung von Pölzl einfach perfekt.",
     },
     {
       id: 4,
-      name: "Julia und Marco",
-      role: "Junges Paar",
-      quote: "Wir haben das Cooking Surface Induktionskochfeld in unserer neuen Küche eingebaut und sind begeistert. Die schnelle Erwärmung der Töpfe und die einfache Reinigung sind großartig. Zudem trägt es zur Energieeinsparung bei, was uns als umweltbewusstes Paar sehr wichtig ist.",
+      name: "Martin",
+      role: "Gastronom",
+      quote: "In meinem Restaurant setzen wir auf Pölzl Naturstein für unsere Küchenarbeitsflächen. Die Qualität und Langlebigkeit sind herausragend, und das Design unterstreicht das hochwertige Ambiente unseres Betriebs.",
     },
     {
       id: 5,
-      name: "Lena",
-      role: "Architektin",
-      quote: "Als Architektin lege ich großen Wert auf Design und Funktionalität. Das Cooking Surface Induktionskochfeld überzeugt in beidem. Es integriert sich perfekt in jedes moderne Küchendesign, spart Platz und bietet dennoch hervorragende Leistung. Zudem ist es sehr pflegeleicht – ein echtes Highlight für jede Küche.",
+      name: "Anna",
+      role: "Innenarchitektin",
+      quote: "Pölzl bietet eine unglaubliche Auswahl an Naturstein- und Keramiklösungen, die perfekt für moderne und zeitlose Designs geeignet sind. Die Präzision der Verarbeitung und die Nachhaltigkeitsstrategie überzeugen mich und meine Kunden gleichermaßen.",
     },
     {
       id: 6,
-      name: "Markus",
-      role: "Koch in einer Großküche",
-      quote: "In unserer Großküche hat das Cooking Surface Induktionskochfeld einen echten Unterschied gemacht. Es bietet hohe Leistung bei gleichzeitig niedrigem Energieverbrauch. Wir können schneller arbeiten und gleichzeitig unsere Energiekosten senken. Die Qualität ist hervorragend, und das Design passt hervorragend zu unserer professionellen Küche.",
+      name: "Florian",
+      role: "Bauunternehmer",
+      quote: "Bei unseren Bauprojekten setzen wir auf die hochwertigen Natursteine von Pölzl. Die flexible Fertigung und die hohe Qualität der Materialien erleichtern uns die Arbeit und sorgen für zufriedene Kunden.",
     },
   ];
 
   return (
-    <section className="py-20 bg-[#B6005B] text-white" id="referenzen">
+    <section className="py-20 bg-white text-gray-900" id="referenzen">
       <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl  text-center mb-16 ">Referenzen</h2>
+        <h2 className="text-5xl text-center mb-16 font-semibold">Referenzen</h2>
         <Carousel
           opts={{
             align: "start",
@@ -63,21 +63,21 @@ export const Testimonials = () => {
                 key={testimonial.id}
                 className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
               >
-                <div className="bg-white/10 p-8 h-full animate-fade-in">
+                <div className="bg-[#acacac] shadow-lg p-8 h-full rounded-lg animate-fade-in">
                   <div className="flex flex-col h-full justify-between">
-                    <p className="text-lg mb-8 italic">"{testimonial.quote}"</p>
+                    <p className="text-lg mb-8 italic text-gray-900">"{testimonial.quote}"</p>
                     <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-gray-300">{testimonial.role}</p>
+                      <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                      <p className="text-gray-600">{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* Pfeile werden auf Mobile und Tablet ausgeblendet */}
-          <CarouselPrevious className="hidden lg:flex absolute top-1/2 transform -translate-y-1/2 -left-12 z-10 hover:bg-white/20 text-black" />
-          <CarouselNext className="hidden lg:flex absolute top-1/2 transform -translate-y-1/2 -right-12 z-10 hover:bg-white/20 text-black" />
+          {/* Pfeile sichtbar auf Desktop, ausgeblendet auf Mobile */}
+          <CarouselPrevious className="hidden lg:flex absolute top-1/2 transform -translate-y-1/2 -left-12 z-10 bg-[#acacac]  text-black rounded-full p-2 transition" />
+          <CarouselNext className="hidden lg:flex absolute top-1/2 transform -translate-y-1/2 -right-12 z-10 bg-[#acacac] text-black rounded-full p-2 transition" />
         </Carousel>
       </div>
     </section>

@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Unica'; /* Der Name, den du der Schriftart zuweist */
+  src: url('./public/fonts/Unica77LL.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'Unica' !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -95,6 +106,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+
+
+
 
 @layer base {
   * {

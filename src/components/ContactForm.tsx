@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export const ContactForm = () => {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "15min" });
+      const cal = await getCalApi({ namespace: "30min" });
       cal("ui", {
         cssVarsPerTheme: {
           light: { "cal-brand": "#1E1E1E" },
@@ -20,19 +20,23 @@ export const ContactForm = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-50" id="beratung">
+    <section className="py-20 bg-white" id="beratung">
       <div className="container max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl text-center mb-4">Buchen Sie jetzt Ihren Termin!</h2>
-          <p className="text-gray-600 mb-7">
-            Lassen Sie uns Ihre Traumküche planen! Füllen Sie das Formular aus und buchen Sie einen Termin, der Ihnen passt.
+          <h2 className="text-4xl text-gray-900 font-semibold mb-4 relative">
+            Buchen Sie jetzt Ihren Termin!
+          </h2>
+          <p className="text-gray-700 mb-7">
+            Lassen Sie uns Ihre Traumküche planen! Buchen Sie Ihren persönlichen 30-minütigen Beratungstermin.
           </p>
-          <Cal
-            namespace="15min"
-            calLink="kuechenstudiobergheim/15min"
-            style={{ width: "100%", height: "100%", overflow: "scroll" }}
-            config={{ layout: "month_view" }}
-          ></Cal>
+
+          {/* Kalender-Anzeige */}
+            <Cal
+              namespace="30min"
+              calLink="kuechenstudiobergheim/30min"
+              style={{ width: "100%", height: "100%", overflow: "scroll" }}
+              config={{ layout: "month_view" }}
+            />
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ export const Header = () => {
               href="#ueber-poelzl"
               className="text-[#000000] uppercase font-semibold tracking-wide transition-all"
             >
-              Über Cooking Surface
+              Über Pölzl
             </a>
             <a
               href="/#referenzen"
