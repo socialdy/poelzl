@@ -20,7 +20,7 @@ export const AboutSection = () => {
           <div className="animate-fade-in">
             <h2 className="text-5xl text-black mb-6 inline-block font-semibold">Warum Pölzl wählen?</h2>
             <p className="text-gray mb-8 text-2xl font-semibold">
-              Pölzl verbindet jahrzehntelange Erfahrung mit innovativer Technik, um Ihnen maßgeschneiderte Lösungen aus Naturstein und Keramik zu bieten – mit höchster Qualität und Nachhaltigkeit.
+              Pölz verbindet jahrzehntelange Erfahrung mit innovativer Technik, um Ihnen maßgeschneiderte Lösungen aus Naturstein und Keramik zu bieten – mit höchster Qualität und Nachhaltigkeit.
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
