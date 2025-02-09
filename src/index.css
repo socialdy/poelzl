@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Unica'; /* Der Name, den du der Schriftart zuweist */
-  src: url('./public/fonts/Unica77LL.ttf') format('truetype');
+  src: url('./fonts/Unica77LL.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
